@@ -1,2 +1,0 @@
-# PitchPerfectSwiftApp
-PitchPerfect Swift application
