@@ -15,13 +15,29 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordButton: UIButton!
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("viewDidLoad is called")
+        setupTextField(tf: tfTop, text: "TOP")
+        setupTextField(tf: tfBot, text: "BOTTOM")
     }
+    
+    func setupTextField(tf: UITextField, text: String){
+        tf.defaultTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeColor : UIColor.black,
+            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-CondensedBlack", size : 40)!,
+            NSAttributedString.Key.strokeWidth : -4.0,
+        ]
+        tf.textColor = UIColor.white
+        tf.tintColor = UIColor.white
+        tf.textAlignment = .center
+        tf.text = text
+        
+//        tf.delegate = self
+    }
+    
+    
     
     @IBAction func recordAudio(_ sender: Any) {
         print("Record button is pressed")
