@@ -16,6 +16,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordButton: UIButton!
     
+    @IBOutlet weak var tfTop: UITextField!
+    @IBOutlet weak var tfBot: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField(tf: tfTop, text: "TOP")
@@ -34,17 +37,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         tf.textAlignment = .center
         tf.text = text
         
-//        tf.delegate = self
     }
     
-    
-    
     @IBAction func recordAudio(_ sender: Any) {
-        print("Record button is pressed")
         recordingLabel.text = "Recording in progress"
         stopRecordButton.isEnabled = true
         recordButton.isEnabled = false
-        
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"

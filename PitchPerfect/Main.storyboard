@@ -48,6 +48,18 @@
                                     <action selector="stopRecording:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="udP-aX-m0Z"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40z-NX-Inj">
+                                <rect key="frame" x="150" y="142" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-HO-wtC">
+                                <rect key="frame" x="167" y="828" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,6 +77,8 @@
                         <outlet property="recordButton" destination="aBc-Nz-xhg" id="IOZ-ir-SAh"/>
                         <outlet property="recordingLabel" destination="ThI-gl-f53" id="aU2-cR-c3Z"/>
                         <outlet property="stopRecordButton" destination="MDq-E6-pvb" id="Pov-s9-wGe"/>
+                        <outlet property="tfBot" destination="W1J-HO-wtC" id="JWf-9P-sfi"/>
+                        <outlet property="tfTop" destination="40z-NX-Inj" id="8lz-6r-CRU"/>
                         <segue destination="rnV-KR-0LD" kind="show" identifier="stopRecording" id="tZS-fZ-Huq"/>
                     </connections>
                 </viewController>
